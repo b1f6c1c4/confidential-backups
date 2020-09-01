@@ -10,7 +10,8 @@
 ## Guide for Kind-I backups
 
 - Examples for Kind-I backups:
-    - Passwords
+    - OpenPGP private key
+    - Dedicated password
 - Use OpenPGP's `-c` for all Kind-I backups.
 - Use the same 40+ byte symmetric passphrase.
     - Hint: 黑
@@ -32,6 +33,9 @@
 
 ## Guide for Kind-II backups
 
+- Examples of Kind-II backups:
+    - 2FA recovery code
+    - OTP shared secret
 - Use OpenPGP's E-key + S-key for all Kind-II backups.
 - Rotate a backup when E-key rotation happens.
 - To add a new backup:
