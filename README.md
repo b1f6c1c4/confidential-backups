@@ -15,13 +15,17 @@
 - Use OpenPGP's `-c` for all Kind-I backups.
 - Use the same 40+ byte symmetric passphrase.
     - Hint: 黑
-- Only type the passphrase on a dedicated, air-gapped machine.
+- Only type the passphrase on a dedicated, air-gapped, stateless machine.
 - Do not rotate the passphrase.
 - Rotate a backup when a new subkey is added.
 - To add a new backup:
 
     ```bash
-    gpg --export-secret-keys <fingerprint> | gpg -c --armor | tee ...
+    # On a dedicated, air-gapped, stateless machine:
+    gpg --edit-key <fingerprint>
+    # passwd -> to remove passphrase
+    gpg --export-secret-keys -o tmp <fingerprint>
+    gpg -c --armor -o ... tmp
     ```
 
 - To recover from a backup:
