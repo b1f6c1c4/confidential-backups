@@ -40,6 +40,7 @@
 - Examples of Kind-II backups:
     - 2FA recovery code
     - OTP shared secret
+    - Legacy SSH private keys
 - Use OpenPGP's E-key + S-key for all Kind-II backups.
 - Rotate a backup when E-key rotation happens.
 - To add a new backup:
